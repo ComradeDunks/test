@@ -34,7 +34,7 @@ namespace Company.Function
         }
 
         [FunctionName("GetPartyId")]
-        public static async Task<IActionResult> GetPartyId([HttpTrigger(AuthorizationLevel.Function, "get", Route = null)] HttpRequest request,
+        public static async Task<IActionResult> GetPartyId([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest request,
         ILogger log)
         {
             string id = "";
